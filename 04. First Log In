@@ -5,7 +5,7 @@ terminal window once you have your terminal window . . .
 If you are using Putty or a similar SSH program and you remembered to put in the “ssh” text file in the boot folder then you have connected to your Pi and are 
 greeted with the following prompt. 
  
- 
+**************************************************************************************************************************** 
 
 Linux raspberrypi 5.4.51-v7l+ #1333 SMP Mon Aug 10 16:51:40 BST 2020 armv7l 
 
@@ -36,6 +36,8 @@ This is a security risk - please login as the 'pi' user and type 'passwd' to set
 Use raspi-config to set the country before use. 
 
 Pi@raspberrypi:~ $ [] 
+
+*****************************************************************************************************************************************
  
 We will be using a number of commands here. Let’s familiarize ourselves with the Pi with the following 
  
