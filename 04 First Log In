@@ -1,0 +1,110 @@
+Again, some questions to ask. How do you interface with your Pi? If you are using a dedicated keyboard and mouse and have your Pi connected to a monitor or TV, 
+then you are greeted with a pretty robust GUI. And your pi will guide you through a setup wizard to set up your desktop. Once that’s done, you will want to open a 
+terminal window once you have your terminal window . . .  
+ 
+If you are using Putty or a similar SSH program and you remembered to put in the “ssh” text file in the boot folder then you have connected to your Pi and are 
+greeted with the following prompt. 
+ 
+ 
+
+Linux raspberrypi 5.4.51-v7l+ #1333 SMP Mon Aug 10 16:51:40 BST 2020 armv7l 
+
+  
+
+The programs included with the Debian GNU/Linux system are free software; 
+
+the exact distribution terms for each program are described in the 
+
+individual files in /usr/share/doc/*/copyright. 
+
+  
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent 
+
+permitted by applicable law. 
+
+Last login: Mon Nov 30 02:58:24 2020 
+
+ 
+
+SSH is enabled and the default password for the 'pi' user has not been changed. 
+
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password. 
+
+ 
+
+Use raspi-config to set the country before use. 
+
+Pi@raspberrypi:~ $ [] 
+ 
+We will be using a number of commands here. Let’s familiarize ourselves with the Pi with the following 
+ 
+sudo raspi-config 
+
+The command will load up a text display you can scroll with the up and down arrow and use the left and right arrows to choose between <select> <finish> <ect...> 
+Option (3) Interface Options will let you configure SSH server and enable it. The trick we did previously with the ssh text document was temporary for this first boot. 
+We must now go into the config file and set it manually. Scroll to interface options with the up and down arrows, then use the left and right arrows to highlight <Select> 
+hit enter and then use the up and down arrows to get to ssh, then the left and right arrows to highlight <Select> and hit enter again. Highlight yes to enable ssh . 
+You can use Localization to set your location and your time zone.  Once you have turned on ssh and   
+ 
+APT (Advanced Package Tool) 
+APT Is a command and utility that comes with Linux, it is the primary means by which you can install and update/upgrade your Pi. So let's get started.  
+
+ 
+
+At the prompt  
+
+Pi@raspberrypi:~ $ [] 
+ 
+type the following command.  
+
+sudo apt update 
+ 
+you may see an output like the following 
+Get:1 http://archive.raspberrypi.org/debian buster InRelease [32.6 kB] 
+
+Get:2 http://raspbian.raspberrypi.org/raspbian buster InRelease [15.0 kB] 
+
+Get:3 http://raspbian.raspberrypi.org/raspbian buster/main armhf Packages [13.0 MB] 
+
+Get:4 http://archive.raspberrypi.org/debian buster/main armhf Packages [336 kB] 
+
+Get:5 http://raspbian.raspberrypi.org/raspbian buster/contrib armhf Packages [58.7 kB] 
+
+Fetched 13.4 MB in 11s (1224 kB/s) 
+
+Reading package lists... Done 
+
+Building dependency tree 
+
+Reading state information... Done 
+
+115 packages can be upgraded. Run 'apt list --upgradable' to see them. 
+
+Pi@raspberrypi:~ $ [] 
+
+ 
+
+You have just updated the list of applications to upgrade for your Pi’s OS. Type the following command to continue 
+
+sudo apt full-upgrade 
+ 
+at the bottom of the wall of text that is outputted to you screen, the las like should read 
+
+After this operation, 25.6 MB of additional disk space will be used. Continue (y/n)  
+ 
+type Y and your Pi will update it’s Operating system and necessary utilities to their latest versions.  Using full-upgrade will update all dependencies 
+associated with any applications that are being updated. 
+
+Once the upgrade is done, type 
+
+sudo reboot 
+
+This will reboot your system. If you configured ssh correctly, you should be able to log in with your ssh client.  
+
+ 
+
+Are you having problems logging in? Did you reset the password and are you using the old password? Did you use  sudo raspi-config  to enable ssh? Read through the 
+this section again line 44-48 and make sure you didn’t skip any steps.  
+
+ 
