@@ -27,4 +27,30 @@ Operating System				SD Card
  
 when you clock on [CHOOSE OS] there should be an option for Ubuntu when you click on it, it’ll give you a number of options. We will go with Ununtu Server 20.04.1 LTS (RPI 3/4)
 Then select your (hopefully new) SD card. Then the last box that was darkened out should be active Click on it [WRITE] and the imager will start installing the 
-Ubuntu image onto the card.  
+Ubuntu image onto the card. (yes, it can take a long time)(Verifying is optional, but just let it do you’ve waited this long, wait a little longer)   
+ 
+once it’s complete, replace the Ubuntu micro-SD card with Raspbian SD card. Store the Raspbian card somewhere safe. Now power up the Pi. Unlike before, 
+the Ubuntu server is preconfigured to accept SSH connection. You will be greeted by a log in. The Username is “ubuntu” and the password is “ubuntu”. 
+You will be prompted to change the password. Type in the old password first “ubuntu” and whatever your new password will be. If using putty you’ll be 
+logged out and prompted to log in again.  
+
+The next steps you are familiar with as they are the same sudo apt update and upgrade from before 
+
+Prompt 
+Ubuntu@ubuntu:~$ [] 
+
+Type 
+Sudo apt update 
+ 
+then  
+sudo apt full-upgrade 
+ 
+if you get an error that a file can’t be accessed because it’s tied to a process just reboot.  
+ 
+while you Pi does the necessary upgrades for your new Ubuntu server let’s talk about some commands so far, we’ve started every command with sudo. 
+“Sudo” is a command prefix that gives your next command administrative authority. It’s may also be called ‘root privileges’ so ever you type a command 
+and it gets rejected, try using sudo.  
+ 
+using your up and down keys in the command line will scroll through your previously inputted commands. This will come in handy as we o deeper into Linux.  
+ 
+once the update is complete type sudo reboot and we are ready for the Minecraft portion of this project.  
