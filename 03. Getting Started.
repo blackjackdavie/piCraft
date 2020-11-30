@@ -52,7 +52,8 @@ create one more file and call it 'ssh' no suffix, just a plain text file with no
 When Pi boots and sees the file it will allow connection from a Secure Shell program like Putty to access and controll the Pi. 
 
 
-Now you are ready to boot up your pi for the first time.  
+>>> First time Boot-up <<<
+**************************
  
 If you have your Pi connected to its own Keyboard and Mouse with Monitor, you’re good to go. Otherwise, you need an SSH client like Putty.  
 https//www/putty.org/ I’ll walk you through the Putty set up but for those of you who have a full kit you can skip to the next section, 
