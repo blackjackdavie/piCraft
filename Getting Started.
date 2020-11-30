@@ -1,0 +1,61 @@
+Getting started. 
+
+First let’s ask a few questions to figure out what we need. Firstly, how are you interacting with the Pi? Did you get a full kit? 
+Do you have a keyboard and mouse dedicated to your Pi? Secondly, how is the pi accessing the internet? Is it connecting via WIFI or Ethernet? 
+We will discuss in detail what operating system to use later.  For the piCraft project I recommended Ubuntu server20.04.1 LTS. 
+Your Pi comes preconfigured with a version of Raspbian (Debian Linux for Raspberry Pi) and I recommend keeping it for trouble shooting as well as the 
+firmware update that we will be doing when first setting up your Pi. This is why I recommend getting multiple micro-SD cards.  
+
+ 
+WIFI you PI.
+
+Use this step if you aren't connecting your Pi directly to Ethernet. However, it's performance as a server using a WIFI connection may suffer. 
+It is highly recomended you use Ethernet connection instead of WIFI, but if you have no other options, then the following will set up your Pi with WIFI at boot.   
+
+You will have to find the boot partition on your pi’s micro-SD card. Insert the card that came with your pi into your computer’s card reader.  
+ 
+The boot partition is formatted to Fat32 and should load, you may get an error message that your computer can’t ready the disk. 
+Ignore the error as we only care about the Fat32 partition for now.  for me it was “boot”.  
+ 
+Create a blank text document and call it “wpa_supplicant” we will add the .config suffix when we save.  
+ 
+write the following code
+
+
+ 
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev 
+
+update_config=1 
+
+country=US 
+
+      
+
+network={ 
+# use your wifi if in place of "YOURSSID"
+    ssid="YOURSSID" 
+# use your wifi password in place of "YOURPASSWORD"
+    psk="YOURPASSWORD" 
+
+    scan_ssid=1 
+
+} 
+ 
+Save the file and add .config so the full name is  wpa_supplicant.config You might get an error message about changing the suffix of your file. Just click ok.  
+
+this step insures that when you boot up your pi for the first time that it will connect to wifi. 
+
+
+
+Now you are ready to boot up your pi for the first time.  
+ 
+If you have your Pi connected to its own Keyboard and Mouse with Monitor, you’re good to go. Otherwise, you need an SSH client like Putty.  
+https//www/putty.org/ I’ll walk you through the Putty set up but for those of you who have a full kit you can skip to the next section, 
+though it may be good for you to learn about Putty anyway.  
+ 
+once you have putty installed, you’re going to need your Pi’s local IP address on your network. No way around it, if you are using an SSH device to control your Pi, 
+you need to log into your router and see what it’s ID is. Every router is different, but there should be a tag on the outside of your router with the default domain and 
+default login and password. Familiarize yourself with this now as you will need to this info later for port-forwarding.  Once you’re found the list of connected devices 
+on your router, the PI should be listed as Raspberry Pi and give you an ipv4 address XXX.XXX.X.X....  
+ 
+In Putty, where it says host name, input the ipv4 address for your pi. Port can stay as 22 hit connect and ok and you will be greeted by your Pi’s login prompt.  
