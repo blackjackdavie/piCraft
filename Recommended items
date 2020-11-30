@@ -1,0 +1,38 @@
+What you’ll need  
+ 
+Raspberry Pi 4 4Gb model (8Gb model recommended)  
+
+appropriate power adapter for your model pi 
+
+Key board and mouse 
+
+HDMI cable 
+
+Internet connection (WIFI at minimum. Ethernet recommended)  
+
+Micro-SD card (most pi4 ship with 32 GB card) 
+
+Card reader to write files from your computer to the micro-SD card you will use with your pi.  
+ 
+#############################################################################
+
+I recommend you get multiple Micro SD cards. The card that comes with your pi should have Raspbian OS but it may have the 32-bit version of Raspbian and we will be 
+installing 64-bit operating system. This way once you have the updated Raspbian OS, you can keep it as a backup to troubleshoot your pi. 
+
+ 
+ 
+Any kit for Raspberry Pi 4 will work, but the minimum recommended is the Pi 4 with 4Mb Ram. I have used and tested these methods with Raspi 4 8Gb edition. 
+Canakit and Adafruit have full kits with Keyboard and mouse as well as power switch external power supplies and HDMI cables. It is recommended that you purchase 
+a kit if you do not have a spare mouse and or keyboard. You can log into the Pi using SSH programs like Putty. If you have HDMI input video capture device, you 
+can use that as a display to monitor your pi. Most pi 4 will ship with a micro SD card of 16 – 32 Gbs. It is recommended you by a few more  
+
+internet connection of some kind. I connected my pi4 to my router. You can use WIFI but Lan (wired connection) is preferable. 
+
+##############################################################################
+
+The following links are to Adafruit and Cana product pages. Please not that as of the writing of this article, neither retailer is 
+affiliated with the piCraft project. The link to their products are for convenience and not intended as an endorsement.  
+
+https://www.adafruit.com/product/4295
+
+https://www.canakit.com/raspberry-pi-4-starter-kit.html
