@@ -1,4 +1,5 @@
-Getting started. 
+>>>Getting started<<< 
+*********************
 
 First let’s ask a few questions to figure out what we need. Firstly, how are you interacting with the Pi? Did you get a full kit? 
 Do you have a keyboard and mouse dedicated to your Pi? Secondly, how is the pi accessing the internet? Is it connecting via WIFI or Ethernet? 
@@ -7,7 +8,8 @@ Your Pi comes preconfigured with a version of Raspbian (Debian Linux for Raspber
 firmware update that we will be doing when first setting up your Pi. This is why I recommend getting multiple micro-SD cards.  
 
  
-WIFI you PI.
+>>>  WIFI you PI  <<<
+*********************
 
 Use this step if you aren't connecting your Pi directly to Ethernet. However, it's performance as a server using a WIFI connection may suffer. 
 It is highly recomended you use Ethernet connection instead of WIFI, but if you have no other options, then the following will set up your Pi with WIFI at boot.   
@@ -21,7 +23,7 @@ Create a blank text document and call it “wpa_supplicant” we will add the .c
  
 write the following code
 
-
+# Wifi script for Raspi boot 
  
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev 
 
@@ -40,10 +42,11 @@ network={
     scan_ssid=1 
 
 } 
- 
+# end script
+
 Save the file and add .config so the full name is  wpa_supplicant.config You might get an error message about changing the suffix of your file. Just click ok.  
 
-this step insures that when you boot up your pi for the first time that it will connect to wifi. While we have the Micro-SD card in place and you have access to the boot folder,
+this step ensures that when you boot up your pi for the first time, it will connect to wifi. While we have the Micro-SD card in place and you have access to the boot folder,
 create one more file and call it 'ssh' no suffix, just a plain text file with no contents. and make sure it's named ssh  
 
 When Pi boots and sees the file it will allow connection from a Secure Shell program like Putty to access and controll the Pi. 
@@ -55,9 +58,10 @@ If you have your Pi connected to its own Keyboard and Mouse with Monitor, you’
 https//www/putty.org/ I’ll walk you through the Putty set up but for those of you who have a full kit you can skip to the next section, 
 though it may be good for you to learn about Putty anyway.  
  
-once you have putty installed, you’re going to need your Pi’s local IP address on your network. No way around it, if you are using an SSH device to control your Pi, 
-you need to log into your router and see what it’s ID is. Every router is different, but there should be a tag on the outside of your router with the default domain and 
+once you have putty installed, you’re going to need your Pi’s local IP address on your network. No way around it, if you are using an SSH client to control your Pi, 
+you need to log into your router and see what it’s local ipv4 is. Every router is different, but there should be a tag on the outside of your router with the default domain and 
 default login and password. Familiarize yourself with this now as you will need to this info later for port-forwarding.  Once you’re found the list of connected devices 
 on your router, the PI should be listed as Raspberry Pi and give you an ipv4 address XXX.XXX.X.X....  
  
-In Putty, where it says host name, input the ipv4 address for your pi. Port can stay as 22 hit connect and ok and you will be greeted by your Pi’s login prompt.  
+In Putty, where it says host name, input the ipv4 address for your pi. Port can stay as 22 hit connect and ok and you will be greeted by your Pi’s login prompt. 
+if your connection is denied, did yo remember to put the ssh file in the boot folder? lines 47 - 52 of this document covers this.   
