@@ -1,9 +1,12 @@
+>>> log in  <<<
+***************
+
 Again, some questions to ask. How do you interface with your Pi? If you are using a dedicated keyboard and mouse and have your Pi connected to a monitor or TV, 
 then you are greeted with a pretty robust GUI. And your pi will guide you through a setup wizard to set up your desktop. Once that’s done, you will want to open a 
-terminal window once you have your terminal window . . .  
+terminal window. Once you have your terminal window skip to line 45.  
  
 If you are using Putty or a similar SSH program and you remembered to put in the “ssh” text file in the boot folder then you have connected to your Pi and are 
-greeted with the following prompt. 
+greeted with the following prompt.
  
 **************************************************************************************************************************** 
 
@@ -48,11 +51,12 @@ Option (3) Interface Options will let you configure SSH server and enable it. Th
 We must now go into the config file and set it manually. Scroll to interface options with the up and down arrows, then use the left and right arrows to highlight <Select> 
 hit enter and then use the up and down arrows to get to ssh, then the left and right arrows to highlight <Select> and hit enter again. Highlight yes to enable ssh . 
 You can use Localization to set your location and your time zone.  Once you have turned on ssh and   
- 
+
+******************************************************************************************************************************************
+
 APT (Advanced Package Tool) 
 APT Is a command and utility that comes with Linux, it is the primary means by which you can install and update/upgrade your Pi. So let's get started.  
 
- 
 
 At the prompt  
 
@@ -85,18 +89,22 @@ Reading state information... Done
 
 Pi@raspberrypi:~ $ [] 
 
- 
+******************************************************************************************************************************************* 
 
 You have just updated the list of applications to upgrade for your Pi’s OS. Type the following command to continue 
 
 sudo apt full-upgrade 
- 
-at the bottom of the wall of text that is outputted to you screen, the las like should read 
 
-After this operation, 25.6 MB of additional disk space will be used. Continue (y/n)  
+ 
+at the bottom of the wall of text that is outputted to your screen, the last line should read 
+
+After this operation, 25.6 MB of additional disk space will be used. Continue (y/n) 
+ 
  
 type Y and your Pi will update it’s Operating system and necessary utilities to their latest versions.  Using full-upgrade will update all dependencies 
 associated with any applications that are being updated. 
+
+********************************************************************************************************************************************
 
 Once the upgrade is done, type 
 
@@ -104,9 +112,9 @@ sudo reboot
 
 This will reboot your system. If you configured ssh correctly, you should be able to log in with your ssh client.  
 
- 
+********************************************************************************************************************************************* 
 
 Are you having problems logging in? Did you reset the password and are you using the old password? Did you use  sudo raspi-config  to enable ssh? Read through the 
-this section again line 44-48 and make sure you didn’t skip any steps.  
+this section again line 49-53 and make sure you didn’t skip any steps.  
 
  
