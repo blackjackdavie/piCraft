@@ -1,38 +1,42 @@
+>>> Ubuntu <<<
+**************
+
 Well time for some more questions. Why Ubuntu and why server? With the exception of the RPI libraries, Ubuntu offers a lean full-service operating system for 
 running our Minecraft server. So, for now We’ll work with Ubuntu but as the project grows, we will explore and provide info for running other 64-bit operating systems 
-on your Pi 4.  
+on your Pi 4. For now Ubuntu server uses minimal resources on our already low spec equipment.   
  
 Right now we’ll need the raspberry Pi imaging software.  
-
  
 Windows 
 https://downloads.raspberrypi.org/imager/imager.exe 
- 
 
 Mac 
 https://downloads.raspberrypi.org/imager/imager.dmg 
 
- 
 
 This software will flash your micro SD card with the appropriate boot image for installing the Ubuntu server. This is why I recommend using multiple SD cards. 
-You can keep your Raspbian SD on the side for trouble shooting your pi since you know it works. Now just flash an Ubuntu image onto a new SD card.
+You can keep your Raspbian SD on the side for trouble shooting your Pi since you know it works. Now just flash an Ubuntu image onto a new SD card.
 At the time of writing, Raspberry Pi Imager was at version 1.3 
  
-you have 3 options
+you are pressented with 3 options
  
 Operating System				SD Card 
 
 [CHOOSE OS]				[CHOOSE SD CARD]		[this option is darkened out] 
 
  
-when you clock on [CHOOSE OS] there should be an option for Ubuntu when you click on it, it’ll give you a number of options. We will go with Ununtu Server 20.04.1 LTS (RPI 3/4)
-Then select your (hopefully new) SD card. Then the last box that was darkened out should be active Click on it [WRITE] and the imager will start installing the 
+when you click on [CHOOSE OS] there should be an option for Ubuntu when you click on it, it’ll give you a number of options. We will go with Ununtu Server 20.04.1 LTS (RPI 3/4)
+Then select your (hopefully new) SD card. Then the last box that was darkened out should be active. Click on it [WRITE] and the imager will start installing the 
 Ubuntu image onto the card. (yes, it can take a long time)(Verifying is optional, but just let it do you’ve waited this long, wait a little longer)   
  
-once it’s complete, replace the Ubuntu micro-SD card with Raspbian SD card. Store the Raspbian card somewhere safe. Now power up the Pi. Unlike before, 
-the Ubuntu server is preconfigured to accept SSH connection. You will be greeted by a log in. The Username is “ubuntu” and the password is “ubuntu”. 
-You will be prompted to change the password. Type in the old password first “ubuntu” and whatever your new password will be. If using putty you’ll be 
-logged out and prompted to log in again.  
+once it’s complete, replace the Raspbien micro-SD card in the pi with the Ubuntu micro-SD card you've just written. Store the Raspbian card somewhere safe. 
+Now power up the Pi. Unlike before, the Ubuntu server is preconfigured to accept SSH connection. You will be greeted by a log in. The Username is “ubuntu” and the 
+password is “ubuntu”. You will be prompted to change the password. Type in the old password first “ubuntu” and whatever your new password will be. If using 
+putty you’ll be logged out and prompted to log in again. If you are using a dedicated keyboard and mouse, and monitor, you just have to follow the prompt and log-in
+with new password.
+
+>>> Upgrade your Ubuntu <<<
+***************************
 
 The next steps you are familiar with as they are the same sudo apt update and upgrade from before 
 
@@ -47,10 +51,12 @@ sudo apt full-upgrade
  
 if you get an error that a file can’t be accessed because it’s tied to a process just reboot.  
  
-while you Pi does the necessary upgrades for your new Ubuntu server let’s talk about some commands so far, we’ve started every command with sudo. 
-“Sudo” is a command prefix that gives your next command administrative authority. It’s may also be called ‘root privileges’ so ever you type a command 
+while your Pi does the necessary upgrades for your new Ubuntu server let’s talk about some commands. So far, we’ve started every command with sudo. 
+“Sudo” is a command prefix that gives your command administrative authority. It may also be called ‘root privileges’ so every time you type a command 
 and it gets rejected, try using sudo.  
  
-using your up and down keys in the command line will scroll through your previously inputted commands. This will come in handy as we o deeper into Linux.  
- 
-once the update is complete type sudo reboot and we are ready for the Minecraft portion of this project.  
+using your up and down keys in the command line will scroll through your previously inputted commands. This will come in handy as we o deeper into Linux. 
+Once the update is complete type 
+sudo reboot
+
+and we are ready for the Minecraft portion of this project.  
