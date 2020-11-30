@@ -1,22 +1,16 @@
+>>> EEPROM <<<
+**************
 the EEPROM is the firmware for you Pi and has controls for it's onboard components. The EepRom isn't updated with sudo apt update however.  
-
   
 
 at the prompt  
-
 pi@raspberrypi:~ $ [] 
 
-  
-
 type  
-
 sudo rpi-eeprom-update 
-
-  
-
 you'll get an output similar to  
 
-  
+*********************************************************************************************************************
 
 BCM2711 detected 
 
@@ -36,26 +30,18 @@ CURRENT: 000138a1
 
 LATEST: 000138a1 
 
-  
+**********************************************************************************************************************
 
-as you can see in my example by firm ware is up to date. as Current version and Latest version match 
-
-  
-
+as you can see in my example the firmware is up to date. as Current version and Latest version match 
 if not, you would be prompted to install new updates  
-
-  
-
 sudo rpi-eeprom-update -a 
-
   
 
 will fetch the new updates, you will then have to  
-
-  
-
 sudo reboot  
+ 
+this will reboot your Pi to install the new frimware. 
+type
+sudo rpi-eeprom-update
 
-  
-
-to install them. 
+and make sure current and latests version numbers match. 
