@@ -21,7 +21,7 @@ installing 64-bit operating system. This way once you have the updated Raspbian 
 
  
  
-Any kit for Raspberry Pi 4 will work, but the minimum recommended is the Pi 4 with 4Mb Ram. I have used and tested these methods with Raspi 4 8Gb edition. 
+Any kit for Raspberry Pi 4 will work, but the minimum recommended is the Pi 4 with 4Gb Ram. I have used and tested these methods with Raspi 4 8Gb edition. 
 Canakit and Adafruit have full kits with Keyboard and mouse as well as power switch external power supplies and HDMI cables. It is recommended that you purchase 
 a kit if you do not have a spare mouse and or keyboard. You can log into the Pi using SSH programs like Putty. If you have HDMI input video capture device, you 
 can use that as a display to monitor your pi. Most pi 4 will ship with a micro SD card of 16 – 32 Gbs. It is recommended you by a few more  
