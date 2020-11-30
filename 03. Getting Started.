@@ -43,7 +43,9 @@ network={
  
 Save the file and add .config so the full name is  wpa_supplicant.config You might get an error message about changing the suffix of your file. Just click ok.  
 
-this step insures that when you boot up your pi for the first time that it will connect to wifi. 
+this step insures that when you boot up your pi for the first time that it will connect to wifi. While we have the Micro-SD card in place and you have access to the boot folder,
+create one more file and call it 'ssh' no suffix, just a plain text file with no contents. and make sure it's named ssh. when Pi boots and sees the file it will allow connection
+from a Secure Shell program like Putty to access and controll the Pi. 
 
 
 
